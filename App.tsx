@@ -1,23 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import ProductList from './src/Components/ProductsList';
-import Title from './src/Components/Title';
+import ProductList from './src/Screens/ProductInfo';
 
-import DATA from './src/data';
-import adidasLogo from './src/Images/AdidasLogo.svg';
+import imageProduct from './src/Images/Bone_Baseball_Sarja.jpg';
 
 export default function App() {
 
   return (
-    <View>
-      <Title
-        logoImage={adidasLogo}
-        name='Bonés'
-      />
-      <ProductList
-        products={DATA.hat}
-      />
-    </View>
+    <ProductList
+      name='Boné Adidas'
+      image={imageProduct}
+      description='Boné de Baseball Sarja, masculino.'
+      price={299}
+    />
   );
 }
